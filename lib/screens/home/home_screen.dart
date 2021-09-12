@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
                 height: size.height * .45,
                 width: size.width,
                 decoration: BoxDecoration(
-                  color: books_list[3].color,
+                  color: books_list[0].color,
                   borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(35),
                     bottomRight: Radius.circular(35),
@@ -92,6 +92,7 @@ class HomeScreen extends StatelessWidget {
                             size: size,
                             isGenre: false,
                             book: books_list[index],
+                            index: index,
                           );
                         }),
                   ),
@@ -101,7 +102,7 @@ class HomeScreen extends StatelessWidget {
                       secondaryTitle: 'SEE ALL'),
                   const SizedBox(height: 35),
                   Container(
-                    height: size.height * .32,
+                    height: size.height * .33,
                     child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemCount: books_list.length,
@@ -110,6 +111,7 @@ class HomeScreen extends StatelessWidget {
                             size: size,
                             isGenre: true,
                             book: books_list[index],
+                            index: index,
                           );
                         }),
                   ),
